@@ -4,6 +4,7 @@ import traceback
 import random
 import time
 import Queue
+
 from collections import defaultdict
 from math import sqrt
 
@@ -188,7 +189,7 @@ class Ants():
     def distance(self, loc1, loc2):
         'calculate the closest distance between to locations'
 
-        def heuristic (end, start):
+        def heuristic(end, start):
             row1, col1 = start
             row2, col2 = end
             d_col = min(abs(col1 - col2), self.cols - abs(col1 - col2))

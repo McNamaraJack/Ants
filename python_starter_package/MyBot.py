@@ -19,7 +19,7 @@ class MyBot:
         for row in range(ants.rows):
             for col in range(ants.cols):
                 self.unseen.append((row, col))
-    
+
     # do turn is run once per turn
     # the ants class has the game state and is updated by the Ants.run method
     # it also has several helper methods to use
@@ -94,6 +94,7 @@ class MyBot:
                 for direction in ('s', 'e', 'w', 'n'):
                     if do_move_direction(hill_loc, direction):
                         break
+
 
 if __name__ == '__main__':
     # psyco will speed up python a little, but is not needed
